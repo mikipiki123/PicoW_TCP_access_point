@@ -69,10 +69,6 @@ static err_t tcp_server_sent(void *arg, struct tcp_pcb *pcb, u16_t len) {
     TCP_LOCAL *tcp_local = (TCP_LOCAL*)arg;
     DEBUG_printf("tcp_server_sent %u\n", len);
     tcp_local->con_state->sent_len += len;
-    // if (con_state->sent_len >= con_state->header_len + con_state->result_len) {
-    //     DEBUG_printf("all done\n");
-    //     return tcp_close_client_connection(con_state, pcb, ERR_OK);
-    // }
     return ERR_OK;
 }
 
