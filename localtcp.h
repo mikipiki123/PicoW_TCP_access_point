@@ -1,0 +1,55 @@
+//
+// Created by Michael Berner on 13/07/2025.
+//
+
+#include "lwip/ip_addr.h"
+
+
+#include "dhcpserver/dhcpserver.h"
+#include "dnsserver/dnsserver.h"
+
+
+#ifndef LOCALTCP_H
+#define LOCALTCP_H
+
+#define TCP_PORT 9999
+#define AP_SSID "PicoAP"
+#define AP_PASS "12345678"
+#define DEBUG_printf printf
+
+typedef struct TCP_SERVER_T_ {
+    struct tcp_pcb *server_pcb;
+    bool complete;
+    ip_addr_t gw;
+} TCP_SERVER_T;
+
+typedef struct TCP_CONNECT_STATE_T_ {
+    struct tcp_pcb *pcb;
+    int sent_len;
+    char headers[128];
+    char result[256];
+    int header_len;
+    int result_len;
+    ip_addr_t *gw;
+} TCP_CONNECT_STATE_T;
+
+typedef struct {
+    TCP_SERVER_T *state;
+    TCP_CONNECT_STATE_T *con_state;
+
+    dhcp_server_t dhcp_server;
+    dns_server_t dns_server;
+
+    char* (*fn)(char* buffer);
+
+}TCP_LOCAL;
+
+
+void tcp_shut(TCP_LOCAL *tcp_local);
+
+TCP_LOCAL *tcp_initial(const char* ap_name,const char* password);
+
+int tcp_open(TCP_LOCAL *tcp_local);
+
+
+#endif //LOCALTCP_H

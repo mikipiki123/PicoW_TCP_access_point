@@ -1,0 +1,7 @@
+/Users/miki/Documents/programiki/cpp/picow_ap_class/build/pioasm/CMakeFiles/pioasm.dir
+/Users/miki/Documents/programiki/cpp/picow_ap_class/build/pioasm/CMakeFiles/edit_cache.dir
+/Users/miki/Documents/programiki/cpp/picow_ap_class/build/pioasm/CMakeFiles/rebuild_cache.dir
+/Users/miki/Documents/programiki/cpp/picow_ap_class/build/pioasm/CMakeFiles/list_install_components.dir
+/Users/miki/Documents/programiki/cpp/picow_ap_class/build/pioasm/CMakeFiles/install.dir
+/Users/miki/Documents/programiki/cpp/picow_ap_class/build/pioasm/CMakeFiles/install/local.dir
+/Users/miki/Documents/programiki/cpp/picow_ap_class/build/pioasm/CMakeFiles/install/strip.dir

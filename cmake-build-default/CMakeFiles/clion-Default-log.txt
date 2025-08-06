@@ -1,0 +1,16 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -S /Users/miki/Documents/programiki/cpp/picow_ap_class -B /Users/miki/Documents/programiki/cpp/picow_ap_class/cmake-build-default
+PICO_SDK_PATH is /Users/miki/pico/pico-sdk
+Target board (PICO_BOARD) is 'pico'.
+Using board configuration from /Users/miki/pico/pico-sdk/src/boards/include/boards/pico.h
+Pico Platform (PICO_PLATFORM) is 'rp2040'.
+Defaulting compiler (PICO_COMPILER) to 'pico_arm_cortex_m0plus_gcc' since not specified.
+Configuring toolchain based on PICO_COMPILER 'pico_arm_cortex_m0plus_gcc'
+Build type is Release
+TinyUSB available at /Users/miki/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040; enabling build support for USB.
+BTstack available at /Users/miki/pico/pico-sdk/lib/btstack
+cyw43-driver available at /Users/miki/pico/pico-sdk/lib/cyw43-driver
+lwIP available at /Users/miki/pico/pico-sdk/lib/lwip
+mbedtls available at /Users/miki/pico/pico-sdk/lib/mbedtls
+-- Configuring done (1.4s)
+-- Generating done (2.5s)
+-- Build files have been written to: /Users/miki/Documents/programiki/cpp/picow_ap_class/cmake-build-default
