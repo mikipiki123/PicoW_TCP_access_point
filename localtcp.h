@@ -13,9 +13,6 @@
 #define LOCALTCP_H
 
 #define TCP_PORT 9999
-#define AP_SSID "PicoAP"
-#define AP_PASS "12345678"
-#define DEBUG_printf printf
 
 typedef struct TCP_SERVER_T_ {
     struct tcp_pcb *server_pcb;
@@ -45,11 +42,14 @@ typedef struct {
 }TCP_LOCAL;
 
 
-void tcp_shut(TCP_LOCAL *tcp_local);
+//initialize TCP and AP features
+TCP_LOCAL *ap_tcp_init(const char* ap_name,const char* password);
 
-TCP_LOCAL *tcp_initial(const char* ap_name,const char* password);
+//open Access point
+int ap_tcp_open(TCP_LOCAL *tcp_local);
 
-int tcp_open(TCP_LOCAL *tcp_local);
+//closing all TCP Initializations
+void ap_tcp_shutdown(TCP_LOCAL *tcp_local);
 
 
 #endif //LOCALTCP_H

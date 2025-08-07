@@ -13,7 +13,7 @@
 // -- example --
 char* res (char* buffer) {
     char* newbuf = (char*) calloc(1024,1);
-    strcpy(newbuf, "message from response: ");
+    strcpy(newbuf, "message from response callback: ");
     strcat(newbuf, buffer);
     strcat(newbuf, "\n");
     return newbuf;
@@ -23,22 +23,22 @@ char* res (char* buffer) {
 int main() {
     stdio_init_all();
 
-    const char *ap_name = "picow_test_miki";
+    const char *ap_name = "picow_test";
     const char *password = "password";
 
 
-    TCP_LOCAL *tcp_local = tcp_initial(ap_name,password);
+    TCP_LOCAL *tcp_local = ap_tcp_init(ap_name,password);
     tcp_local->fn = res;
 
-    int err = tcp_open(tcp_local);
+    int err = ap_tcp_open(tcp_local);
 
     if (err != NULL) {
-        DEBUG_printf("ERROR VALUE: %d \n",err);
+        printf("Failed to open TCP Access Point.\n");
     }
 
-    tcp_shut(tcp_local);
+    ap_tcp_shutdown(tcp_local);
 
-    printf("Test complete\n");
+    printf("Test completed\n");
 
     return 0;
 

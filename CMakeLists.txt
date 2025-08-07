@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 3.30)
 #important!!!
 #cmake -DPICO_BOARD=pico_w ..
 
-#set(PICO_SDK_FETCH_FROM_GIT on)
 
 include(
         pico_sdk_import.cmake
