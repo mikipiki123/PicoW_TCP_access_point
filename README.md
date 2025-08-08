@@ -3,7 +3,7 @@ The user can easily connect to pico W via access point uses TCP/IP protocol, and
 
 ## How it works?
 
-The system uses a single control structure called TCP_LOCAL:␣␣
+The system uses a single control structure called TCP_LOCAL:  
 TCP_LOCAL - handles TCP,DHCP,DNS structs and and provides a single generic callback function *fn.
 
 ### The module has 3 functions:
