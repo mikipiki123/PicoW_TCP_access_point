@@ -3,11 +3,10 @@ The user can easily connect to pico W via access point uses TCP/IP protocol, and
 
 How it works?
 
-Using single control structure:
-TCP_LOCAL - handles TCP,DHCP,DNS structs and single generic callback function *fn.
+The system uses a single control structure called TCP_LOCAL:
+TCP_LOCAL - handles TCP,DHCP,DNS structs and and provides a single generic callback function *fn.
 
 The module has 3 functions:
-
 ap_tcp_init - getting from user AP name and password and initialize TCP/IP settings, including DHCP and DNS.
 ap_tcp_open - open AP and waiting for client connection and responses.
 ap_tcp_shutdown - closes all Services used by AP.
