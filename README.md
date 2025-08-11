@@ -1,11 +1,11 @@
 ## Introduction
 This infrastructure designed for various porposes using Pico W Infineon CYW43439 (2.4 GHz).
-The user can easily connect to pico W via access point uses TCP/IP protocol, and sends any commands wireless.
+The user can easily connect to pico W via access point uses TCP/IP protocol, and sends any commands wirelessly.
 
 ## How it works?
 
 The system uses a single control structure called TCP_LOCAL:  
-TCP_LOCAL - handles TCP,DHCP,DNS structs and and provides a single generic callback function *fn.
+TCP_LOCAL - handles TCP,DHCP,DNS structs and provides a single generic callback function *fn.
 
 ### The module has 3 functions:
 •	ap_tcp_init – Receives the AP name and password from the user and initializes the TCP/IP stack, including DHCP and DNS.  
